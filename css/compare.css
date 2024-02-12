@@ -1,0 +1,25 @@
+.card{
+    border-style: solid;
+    border-color:  #fbdb4c;
+    width: fit-content;
+    border-radius: 20px;
+}
+
+.grid-2 {
+    height: 50vh;
+}
+
+#graph{
+    margin-top: 50px;
+}
+
+.time-text{
+    display: inline-block;
+    width: 280px;
+}
+
+.swiper-slide {
+    position: relative;
+    padding: 0rem 0rem;
+    margin-top: 30px;
+}

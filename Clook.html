@@ -1,0 +1,207 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+    <script src="https://kit.fontawesome.com/840d8ec2b8.js" crossorigin="anonymous"></script>
+    <title>CLOOK</title>
+    <script src="./js/CLOOKscript.js" defer></script>
+    <link rel="stylesheet" href="./css/clook_style.css">
+    <link rel="stylesheet" href="./css/style.css">
+</head>
+<body>
+
+    <nav>
+      <div class="container">
+        <div class="logo">
+          <a href="index.html"> <img src="img\20220223_092904_0000.png" alt="" /></a>
+        </div>
+
+        <div class="links">
+          <ul>
+            <li>
+              <a href="index.html">Home</a>
+            </li>
+            <li>
+              <a href="FCFS.html">FCFS</a>
+            </li>
+            <li>
+              <a href="SSTF.html">SSTF</a>
+            </li>
+            <li>
+              <a href="CSCAN.html" >CSCAN</a>
+            </li>
+            <li>
+              <a href="look.html">LOOK</a>
+            </li>
+            <li>
+              <a href="SCAN.html">SCAN</a>
+            </li>
+            <li>
+              <a href="Clook.html" class="active">CLOOK</a>
+            </li>
+            <li>
+              <a href="index.html#AboutUs" class="active">About us</a>
+            </li>
+          </ul>
+        </div>
+
+        <div class="hamburger-menu">
+          <div class="bar"></div>
+        </div>
+      </div>
+    </nav>
+
+       <section class="maincontainer section" id="CLOOK">
+        <div class="container" id="maincontent">
+          <div class="section-header" id="heading-text">
+            <h3 class="title" data-title="Disc scheduling Algorithms">CLOOK Algorithm</h3>
+          </div>
+          
+          <div class="theory-container">
+            <div class="theory-heading"><h3>CLOOK</h3></div>
+            <div class="theory-defination-content">
+              <p>C-LOOK is an enhanced version of both SCAN as well as LOOK disk scheduling algorithms. This algorithm also uses the idea of wrapping the tracks as a circular cylinder as C-SCAN algorithm but the seek time is better than C-SCAN algorithm. We know that C-SCAN is used to avoid starvation and services all the requests more uniformly, the same goes for C-LOOK. 
+                In this algorithm, the head services requests only in one direction(either left or right) until all the requests in this direction are not serviced and then jumps back to the farthest request on the other direction and service the remaining requests which gives a better uniform servicing as well as avoids wasting seek time for going till the end of the disk.</p>
+            </div>
+            <div class="algorithm-heading"><h3>Algorithm</h3></div>
+            <div class="algorithm-content">
+               <div class="steps"><span class="index-number">1.</span><span class="step-content">Let Request array represents an array storing indexes of the tracks that have been requested 
+                in ascending order of their time of arrival and head is the position of the disk head.</span></div>
+               <div class="steps"><span class="index-number">2.</span><span class="step-content">The initial direction in which the head is moving is given and it services in the same 
+                direction.</span></div>
+               <div class="steps"><span class="index-number">3.</span><span class="step-content">The head services all the requests one by one in the direction it is moving.</span></div>
+               <div class="steps"><span class="index-number">4.</span><span class="step-content"> The head continues to move in the same direction until all the requests in this direction 
+                have been serviced.
+                </span></div>
+               <div class="steps"><span class="index-number">5.</span><span class="step-content">While moving in this direction, calculate the absolute distance of the tracks from the head.
+              </span></div>
+               <div class="steps"><span class="index-number">6.</span><span class="step-content">Increment the total seek count with this distance.</span></div>
+               <div class="steps"><span class="index-number">7.</span><span class="step-content">Currently serviced track position now becomes the new head position.</span></div>
+               <div class="steps"><span class="index-number">8.</span><span class="step-content">Go to step 5 until we reach the last request in this direction.
+              </span></div>
+               <div class="steps"><span class="index-number">9.</span><span class="step-content">If we reach the last request in the current direction then reverse the direction and move the 
+                head in this direction until we reach the last request that is needed to be serviced in this 
+                direction without servicing the intermediate requests.</span></div>
+               <div class="steps"><span class="index-number">10.</span><span class="step-content">Reverse the direction and go to step 3 until all the requests have not been serviced.</span></div>
+            </div>
+          </div>
+
+          <div class="maincontainer-content grid-2" id="Stimulator">
+            <!-- <div class="block-1 reviews">
+              <div class="swiper-container">
+                <div class="swiper-wrapper">
+
+                  
+                  <div class="swiper-slide">
+                    <i class="fas fa-quote-left quote"></i>
+                    <div class="rate">
+                     <h3 >Simulator</h3>
+                    </div>
+
+                    <p class="review-text">
+                      
+                      <p> <span class="block"> Request Queue: </span><span class="input-box"> [<span class="request-queue"></span></span> ]</p>
+                      
+                      <p><span class="block">Queries: </span><input type="number" id="number" required><button id="add" onclick="inputQueries();">Add</button></p>
+    
+                        <p><span class="block">Add head:</span> <input type="number" id="starting"><button id="headbtn" onclick="addHead();">Add</button></p>
+                        
+                        
+                        <button id="cal" onclick="CLOOK();">Calculate</button>
+                        <a href="Clook.html"><button id="res" >Reset</button></a>
+                        <p class="time-seek toogle-class" id="time">The Total seek time is: <input type="number" id="output"><button id="diagram" onclick="showGraphCLook();">Show Graph</button></p>
+                        
+                        <canvas class="Chart toogle-class" id="CLOOKchart"></canvas>
+                    </p>
+
+                   
+                  </div>
+
+                  
+
+                </div>
+
+              </div>
+            </div> -->
+
+            <div class="block-2 image">
+              <img src="./img/20220223_100915_0000.png" alt="" class="img-element" />
+            </div>
+          </div>
+        </div>
+      </section>
+      <footer class="footer">
+        <div class="container">
+          <div class="grid-4">
+            <div class="grid-4-col footer-about">
+              <h3 class="title-sm">Disc scheduling Algorithm</h3>
+              <p class="text">
+                A simulating website to visualize and compare different Disc Scheduling Algorithms
+              </p>
+            </div>
+  
+            <div class="grid-4-col footer-links">
+              <h3 class="title-sm">Links</h3>
+              <ul>
+                <li>
+                  <a href="FCFS.html">FCFS</a>
+                </li>
+                <li>
+                  <a href="SSTF.html">SSTF</a>
+                </li>
+                <li>
+                  <a href="CSCAN.html">CSCAN</a>
+                </li>
+                <li>
+                  <a href="LOOK.html">LOOK</a>
+                </li>
+                <li>
+                  <a href="SCAN.html">SCAN</a>
+                </li>
+                <li>
+                  <a href="CLOOK.html">CLOOK</a>
+                </li>
+              </ul>
+            </div>
+  
+            <div class="grid-4-col footer-links">
+              <h3 class="title-sm">Reach out</h3>
+                <ul>
+                  <li>
+                    <a href="https://www.linkedin.com/in/yamini-sisodia-357b53220/">Yamini Sisodia</a>
+                  </li>
+                </ul>
+  
+            </div>
+  
+            <div class="grid-4-col footer-newstletter">
+              
+              <div class="footer-input-wrap">
+                <input type="email" class="footer-input" placeholder="To TOP" />
+                <a href="#" class="input-arrow">
+                  <i class="fas fa-angle-up"></i>
+                </a>
+              </div>
+            </div>
+          </div>
+  
+  
+            
+  
+              <div class="back-btn-wrap">
+                <a href="#" class="back-btn">
+                  <i class="fas fa-chevron-up"></i>
+                </a>
+              </div>
+            </div>
+          </div>
+        </div>
+      </footer>
+      <!---edit-->
+      <script src="/js/app.js"></script>
+      <script src="/js/isotope.pkgd.min.js\"></script>
+</body>
+</html>

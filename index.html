@@ -1,0 +1,1298 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Disc Scheduling Algorithms</title>
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.1/css/all.min.css"
+    />
+    <link
+      rel="stylesheet"
+      href="https://unpkg.com/swiper/swiper-bundle.min.css"
+    />
+    <link rel="stylesheet" href="./css/style.css" />
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.5.1/jquery.min.js" defer></script>
+    <script src="./js/isotope.pkgd.min.js" defer></script>
+    <script src="https://unpkg.com/swiper/swiper-bundle.min.js" defer></script>
+    <script src="./js/app.js" defer></script>
+  </head>
+  <body>
+    <main>
+      <header id="header">
+        <div class="overlay overlay-lg">
+          <img src="./img/shapes/square.png" class="shape square" alt="" />
+          <img src="./img/shapes/circle.png" class="shape circle" alt="" />
+          <img
+            src="./img/shapes/half-circle.png"
+            class="shape half-circle1"
+            alt=""
+          />
+          <img
+            src="./img/shapes/half-circle.png"
+            class="shape half-circle2"
+            alt=""
+          />
+          <img src="./img/shapes/x.png" class="shape xshape" alt="" />
+          <img src="./img/shapes/wave.png" class="shape wave wave1" alt="" />
+          <img src="./img/shapes/wave.png" class="shape wave wave2" alt="" />
+          <img src="./img/shapes/triangle.png" class="shape triangle" alt="" />
+          <img src="./img/shapes/wave.png" class="letters" alt="" />
+      
+          <img src="./img/shapes/points1.png" class="points points1" alt="" />
+        </div>
+
+        <nav>
+          <div class="container">
+            <div class="logo">
+              <img src="img\20220223_092904_0000.png" alt="" />
+            </div>
+
+            <div class="links">
+              <ul>
+                <li>
+                  <a href="#header" class="active">Home</a>
+                </li>
+                <li>
+                  <a href="#Types">Types</a>
+                </li>
+                <li>
+                  <a href="#FCFS">FCFS</a>
+                </li>
+               
+                <li>
+                  <a href="#CSCAN">CSCAN</a>
+                </li>
+                <li>
+                  <a href="#LOOK">LOOK</a>
+                </li>
+                <li>
+                  <a href="#SCAN">SCAN</a>
+                </li>
+                
+                <li>
+                  <a href="compare.html">COMPARE</a>
+                </li>
+                <li>
+                  <a href="#AboutUs" class="active">About us</a>
+                </li>
+              </ul>
+            </div>
+
+            <div class="hamburger-menu">
+              <div class="bar"></div>
+            </div>
+          </div>
+        </nav>
+
+        <div class="header-content">
+          <div class="container grid-2">
+            <div class="column-1">
+              <h1 class="header-title">Disc scheduling Algorithms</h1>
+              <p class="text">
+                Disk scheduling is done by operating systems to schedule I/O requests arriving for the disk. Disk scheduling is also known as I/O scheduling. 
+      
+              </p>
+              <h5> Key Terms : </h5> 
+              <p> Seek Time:Seek time is the time taken to locate the disk arm to a specified 
+                track where the data is to be read or write. So the disk scheduling algorithm that gives minimum average seek time is better.</p>
+
+                <p> Head : Is defined as the starting position of the disk arm</p>
+              
+            </div>
+
+            <div class="column-2 image">
+              <img
+                src="./img/shapes/points2.png"
+                class="points points2"
+                alt=""
+              />
+              <img src="img\20220223_102037_0000.png" class="img-element z-index" alt="" />
+            </div>
+          </div>
+        </div>
+      </header>
+
+      <section class="services section" id="Types">
+        <div class="container">
+          <div class="section-header">
+            <h3 class="title" data-title="Disc Scheduling algorithms">The Types</h3>
+            <p class="text">
+            The following are six different types of Disc scheduling algorithms.
+            </p>
+          </div>
+          
+          <div class="cards">
+
+            <a href="#FCFS" class="type-link">
+              <div class="card-wrap">
+                <img
+                  src="./img/shapes/points3.png"
+                  class="points points1 points-sq"
+                  alt=""
+                />
+                <div class="card" data-card="UI/UX">
+                  <div class="card-content z-index">
+                    <img src="./img/code-icon.png" class="icon" alt="" />
+                    <h3 class="title-sm">FCFS</h3>
+                    <p class="text">
+                      The requests 
+                      are addressed in the order they arrive in the disk queue.
+                    </p>
+                    <a href="FCFS.html" class="btn small">Know More</a>
+                  </div>
+                </div>
+              </div>
+            </a>
+           
+
+            <a href="#SSTF" class="type-link">
+              <div class="card-wrap">
+                <div class="card" data-card="Code">
+                  <div class="card-content z-index">
+                    <img src="./img/code-icon.png" class="icon" alt="" />
+                    <h3 class="title-sm">SSTF</h3>
+                    <p class="text">
+                      Requests having shortest seek time are executed 
+                      first. 
+                    </p>
+                    <a href="SSTF.html" class="btn small">Know More</a>
+                  </div>
+                </div>
+              </div>
+            </a>
+
+
+           <a href="#CSCAN" class="type-link">
+            <div class="card-wrap">
+              <div class="card" data-card="Code">
+                <div class="card-content z-index">
+                  <img src="./img/code-icon.png" class="icon" alt="" />
+                  <h3 class="title-sm">CSCAN</h3>
+                  <p class="text">
+                    The disk arm again scans the path that has been scanned, 
+                    after reversing its direction.
+                  </p>
+                  <a href="CSCAN.html" class="btn small">Know More</a>
+                </div>
+              </div>
+            </div>
+           </a>
+           
+           
+            <a href="#LOOK" class="type-link">
+              <div class="card-wrap">
+                <div class="card" data-card="Code">
+                  <div class="card-content z-index">
+                    <img src="./img/code-icon.png" class="icon" alt="" />
+                    <h3 class="title-sm">LOOK</h3>
+                    <p class="text">
+                      Disk arm in spite of going to the end of the disk goes only to the last request to be 
+serviced in front of the head and then reverses its direction from there.
+                    </p>
+                    <a href="look.html" class="btn small">Know More</a>
+                  </div>
+                </div>
+              </div>
+            </a>
+
+            <a href="#SCAN" class="type-link">
+              <div class="card-wrap">
+                <div class="card" data-card="Code">
+                  <div class="card-content z-index">
+                    <img src="./img/code-icon.png" class="icon" alt="" />
+                    <h3 class="title-sm">SCAN</h3>
+                    <p class="text">
+                      The disk arm moves into a particular direction and services the 
+requests coming in its path and after reaching the end of disk, it reverses its direction.
+                    </p>
+                    <a href="SCAN.html" class="btn small">Know More</a>
+                  </div>
+                </div>
+              </div>
+            </a>
+
+            <a href="#CLOOK" class="type-link">
+              <div class="card-wrap">
+                <div class="card" data-card="Code">
+                  <div class="card-content z-index">
+                    <img src="./img/code-icon.png" class="icon" alt="" />
+                    <h3 class="title-sm">CLOOK</h3>
+                    <p class="text">
+                      The disk arm in spite of going to the end 
+                      goes only to the last request to be serviced in front of the head and then from there goes to 
+                      the other end’s last request.
+                    </p>
+                    <a href="Clook.html" class="btn small">Know More</a>
+                  </div>
+                </div>
+              </div>
+            </a>
+
+
+           
+
+
+          </div>
+        </div>
+      </section>
+
+      
+    
+
+      <section class="testimonials section" id="FCFS">
+        <div class="container">
+          <div class="section-header">
+            <h3 class="title" data-title="Disc scheduling Algorithms">FCFS Algorithm</h3>
+          </div>
+
+          <div class="testi-content grid-2">
+            <div class="column-1 reviews">
+              <div class="swiper-container">
+                <div class="swiper-wrapper">
+
+                  
+                  <div class="swiper-slide review">
+                    <i class="fas fa-quote-left quote"></i>
+                    <div class="rate">
+                     <h3>The Algorithm</h3>
+                    </div>
+
+                    <p class="review-text">
+                      FCFS is the simplest disk scheduling algorithm. As the name suggests, this algorithm entertains requests 
+in the order they arrive in the disk queue. The algorithm looks very fair and there is no starvation (all 
+requests are serviced sequentially) but generally, it does not provide the fastest service
+                    </p>
+
+                   
+                  </div>
+
+
+                  <div class="swiper-slide review">
+                    <i class="fas fa-quote-left quote"></i>
+                    <div class="rate">
+                     <h3>Step1</h3>
+                    </div>
+
+                    <p class="review-text">
+                      Let Request array represents an array storing indexes of tracks that have been requested in 
+ascending order of their time of arrival. ‘head’ is the position of disk head.
+                    </p>
+
+                    
+                  </div>
+
+                  <div class="swiper-slide review">
+                    <i class="fas fa-quote-left quote"></i>
+                    <div class="rate">
+                      <h3>Step2</h3>
+                    </div>
+
+                    <p class="review-text">
+                      Let us one by one take the tracks in default order and calculate the absolute distance of the 
+                      track from the head.
+                    </p>
+
+                  
+                  </div>
+
+                  <div class="swiper-slide review">
+                    <i class="fas fa-quote-left quote"></i>
+                    <div class="rate">
+                     <h3>Step3</h3>
+                    </div>
+
+                    <p class="review-text">
+                      Increment the total seek count with this distance.
+                    </p>
+
+                    
+                  </div>
+
+                  <div class="swiper-slide review">
+                    <i class="fas fa-quote-left quote"></i>
+                    <div class="rate">
+                     <h3>Step4</h3>
+                    </div>
+
+                    <p class="review-text">
+                      Currently serviced track position now becomes the new head position
+                    </p>
+
+                    
+                  </div>
+
+                  <div class="swiper-slide review">
+                    <i class="fas fa-quote-left quote"></i>
+                    <div class="rate">
+                     <h3>Step5</h3>
+                    </div>
+
+                    <p class="review-text">
+                      Go to step 2 until all tracks in request array have not been serviced.
+
+                    </p>
+
+                    
+                  </div>
+                  
+
+                </div>
+
+                <div class="review-nav swiper-button-prev">
+                  <i class="fas fa-long-arrow-alt-left"></i>
+                </div>
+                <div class="review-nav swiper-button-next">
+                  <i class="fas fa-long-arrow-alt-right"></i>
+                </div>
+              </div>
+           
+           
+              <a href="FCFS.html#Stimulator" class="btn calculate">Calculate</a>
+            </div>
+
+            <div class="column-2 image">
+              <img src="img/FCFS.png" alt="" class="img-element" />
+            </div>
+          </div>
+        </div>
+
+      </section>
+
+      <!---edit-->
+
+      
+      <!-- <section class="testimonials section" id="SSTF">
+        <div class="container">
+          <div class="section-header">
+            <h3 class="title" data-title="Disc scheduling Algorithms">SSTF Algorithm</h3>
+          </div>
+
+          <div class="testi-content grid-2">
+            <div class="column-1 reviews">
+              <div class="swiper-container">
+                <div class="swiper-wrapper">
+
+                  <div class="swiper-slide review">
+                    <i class="fas fa-quote-left quote"></i>
+                    <div class="rate">
+                     <h3>The Algorithm</h3>
+                    </div>
+
+                    <p class="review-text">
+                      Lorem ipsum dolor sit amet consectetur, adipisicing elit.
+                      Perspiciatis ab incidunt, dicta quam inventore ipsum
+                      dolor. Consectetur nam incidunt error!
+                    </p>
+
+                   
+                  </div>
+
+                  <div class="swiper-slide review">
+                    <i class="fas fa-quote-left quote"></i>
+                    <div class="rate">
+                     <h3>Step1</h3>
+                    </div>
+
+                    <p class="review-text">
+                      Lorem, ipsum dolor sit amet consectetur adipisicing elit.
+                      Laudantium adipisci veniam debitis quas, sapiente
+                      repellendus mollitia. Laboriosam labore voluptate quos?
+                    </p>
+
+                    
+                  </div>
+
+                  <div class="swiper-slide review">
+                    <i class="fas fa-quote-left quote"></i>
+                    <div class="rate">
+                      <h3>Step2</h3>
+                    </div>
+
+                    <p class="review-text">
+                      Lorem ipsum dolor, sit amet consectetur adipisicing elit.
+                      Fugiat voluptate consequatur aut tenetur fugit error
+                      molestiae quaerat ex odio rem?
+                    </p>
+
+                  
+                  </div>
+
+                  <div class="swiper-slide review">
+                    <i class="fas fa-quote-left quote"></i>
+                    <div class="rate">
+                     <h3>Step3</h3>
+                    </div>
+                    <p class="review-text">
+                      Lorem ipsum dolor sit amet consectetur adipisicing elit.
+                      Cupiditate voluptatum enim nemo quod amet dolorum aliquam,
+                      sapiente omnis eaque consectetur.
+                    </p>
+
+                    
+                  </div>
+
+                </div>
+
+                <div class="review-nav swiper-button-prev">
+                  <i class="fas fa-long-arrow-alt-left"></i>
+                </div>
+                <div class="review-nav swiper-button-next">
+                  <i class="fas fa-long-arrow-alt-right"></i>
+                </div>
+
+              </div>
+              <a href="/SSTF.html#Stimulator" class="btn calculate">Calculate</a>
+            </div>
+
+            <div class="column-2 image">
+              <img src="img/SSTF.png" alt="" class="img-element" />
+            </div>
+          </div>
+        </div>
+
+       
+      </section> -->
+
+
+
+
+
+      
+      <section class="testimonials section" id="CSCAN">
+        <div class="container">
+          <div class="section-header">
+            <h3 class="title" data-title="Disc scheduling Algorithms">CSCAN Algorithm</h3>
+          </div>
+
+          <div class="testi-content grid-2">
+            <div class="column-1 reviews">
+              <div class="swiper-container">
+                <div class="swiper-wrapper">
+
+                  
+                  <div class="swiper-slide review">
+                    <i class="fas fa-quote-left quote"></i>
+                    <div class="rate">
+                     <h3>The Algorithm</h3>
+                    </div>
+
+                    <p class="review-text">
+                      C-SCAN moves the head from one end servicing all the requests to the 
+other end. However, as soon as the head reaches the other end, it immediately returns to the beginning of 
+the disk without servicing any requests on the return trip (see chart below) and starts servicing again once 
+reaches the beginning. !
+                    </p>
+
+                   
+                  </div>
+
+
+                  <div class="swiper-slide review">
+                    <i class="fas fa-quote-left quote"></i>
+                    <div class="rate">
+                     <h3>Step1</h3>
+                    </div>
+
+                    <p class="review-text">
+                      Let Request array represents an array storing indexes of tracks that have been requested in 
+                      ascending order of their time of arrival. ‘head’ is the position of disk head.
+                    </p>
+
+                    
+                  </div>
+
+                  <div class="swiper-slide review">
+                    <i class="fas fa-quote-left quote"></i>
+                    <div class="rate">
+                      <h3>Step2</h3>
+                    </div>
+
+                    <p class="review-text">
+                      The head services only in the right direction from 0 to size of the disk.
+                    </p>
+
+                  
+                  </div>
+
+                  <div class="swiper-slide review">
+                    <i class="fas fa-quote-left quote"></i>
+                    <div class="rate">
+                     <h3>Step3</h3>
+                    </div>
+
+                    <p class="review-text">
+                      While moving in the left direction do not service any of the tracks
+                    </p>
+
+                    
+                  </div>
+
+
+                  <div class="swiper-slide review">
+                    <i class="fas fa-quote-left quote"></i>
+                    <div class="rate">
+                     <h3>Step4</h3>
+                    </div>
+
+                    <p class="review-text">
+                      When we reach at the beginning(left end) reverse the direction.
+                    </p>
+
+                    
+                  </div>
+
+                  <div class="swiper-slide review">
+                    <i class="fas fa-quote-left quote"></i>
+                    <div class="rate">
+                     <h3>Step5</h3>
+                    </div>
+
+                    <p class="review-text">
+                      While moving in right direction it services all tracks one by one.
+                    </p>
+
+                    
+                  </div>
+
+                  <div class="swiper-slide review">
+                    <i class="fas fa-quote-left quote"></i>
+                    <div class="rate">
+                     <h3>Step6</h3>
+                    </div>
+
+                    <p class="review-text">
+                      While moving in right direction calculate the absolute distance of the track from the head.
+
+                    </p>
+
+                    
+                  </div>
+
+                  <div class="swiper-slide review">
+                    <i class="fas fa-quote-left quote"></i>
+                    <div class="rate">
+                     <h3>Step7</h3>
+                    </div>
+
+                    <p class="review-text">
+                      Increment the total seek count with this distance.
+                    </p>
+
+                    
+                  </div>
+
+                  <div class="swiper-slide review">
+                    <i class="fas fa-quote-left quote"></i>
+                    <div class="rate">
+                     <h3>Step8</h3>
+                    </div>
+
+                    <p class="review-text">
+                      Currently serviced track position now becomes the new head position.
+                    </p>
+
+                    
+                  </div>
+
+
+                  <div class="swiper-slide review">
+                    <i class="fas fa-quote-left quote"></i>
+                    <div class="rate">
+                     <h3>Step9</h3>
+                    </div>
+
+                    <p class="review-text">
+                      Go to step 6 until we reach at right end of the disk.
+                    </p>
+
+                    
+                  </div>
+
+                  <div class="swiper-slide review">
+                    <i class="fas fa-quote-left quote"></i>
+                    <div class="rate">
+                     <h3>Step10</h3>
+                    </div>
+
+                    <p class="review-text">
+                      If we reach at the right end of the disk reverse the direction and go to step 3 until all tracks 
+                      in request array have not been serviced.
+                    </p>
+
+                    
+                  </div>
+
+                  
+
+                </div>
+
+                <div class="review-nav swiper-button-prev">
+                  <i class="fas fa-long-arrow-alt-left"></i>
+                </div>
+                <div class="review-nav swiper-button-next">
+                  <i class="fas fa-long-arrow-alt-right"></i>
+                </div>
+              </div>
+              <a href="CSCAN.html#Stimulator" class="btn calculate">Calculate</a>
+            </div>
+
+            <div class="column-2 image">
+              <img src="img/CSCAN.png" alt="" class="img-element" />
+            </div>
+          </div>
+        </div>
+
+        
+      </section>
+
+
+
+
+
+      
+      <section class="testimonials section" id="LOOK">
+        <div class="container">
+          <div class="section-header">
+            <h3 class="title" data-title="Disc scheduling Algorithms">LOOK Algorithm</h3>
+          </div>
+
+          <div class="testi-content grid-2">
+            <div class="column-1 reviews">
+              <div class="swiper-container">
+                <div class="swiper-wrapper">
+
+                  
+                  <div class="swiper-slide review">
+                    <i class="fas fa-quote-left quote"></i>
+                    <div class="rate">
+                     <h3>The Algorithm</h3>
+                    </div>
+
+                    <p class="review-text">
+                      The 
+                      LOOK algorithm services request similarly as SCAN algorithm meanwhile it also “looks” ahead as if 
+                      there are more tracks that are needed to be serviced in the same direction. If there are no pending requests 
+                      in the moving direction the head reverses the direction and start servicing requests in the opposite 
+                      direction.
+                    </p>
+
+                   
+                  </div>
+
+
+                  <div class="swiper-slide review">
+                    <i class="fas fa-quote-left quote"></i>
+                    <div class="rate">
+                     <h3>Step1</h3>
+                    </div>
+
+                    <p class="review-text">
+                      Let Request array represents an array storing indexes of tracks that have been requested in 
+ascending order of their time of arrival. ‘head’ is the position of disk head.
+                    </p>
+
+                    
+                  </div>
+
+                  <div class="swiper-slide review">
+                    <i class="fas fa-quote-left quote"></i>
+                    <div class="rate">
+                      <h3>Step2</h3>
+                    </div>
+
+                    <p class="review-text">
+                      The intial direction in which head is moving is given and it services in the same direction.
+                    </p>
+
+                  
+                  </div>
+
+                  <div class="swiper-slide review">
+                    <i class="fas fa-quote-left quote"></i>
+                    <div class="rate">
+                     <h3>Step3</h3>
+                    </div>
+
+                    <p class="review-text">
+                      The head services all the requests one by one in the direction head is moving.
+                    </p>
+
+                    
+                  </div>
+
+                  <div class="swiper-slide review">
+                    <i class="fas fa-quote-left quote"></i>
+                    <div class="rate">
+                     <h3>Step4</h3>
+                    </div>
+
+                    <p class="review-text">
+                      The head continues to move in the same direction untill all the request in this direction are 
+                      not finished.
+                      
+                    </p>
+
+                    
+                  </div>
+                  <div class="swiper-slide review">
+                    <i class="fas fa-quote-left quote"></i>
+                    <div class="rate">
+                     <h3>Step5</h3>
+                    </div>
+
+                    <p class="review-text">
+                      While moving in this direction calculate the absolute distance of the track from the head.
+                    </p>
+
+                    
+                  </div>
+
+                  <div class="swiper-slide review">
+                    <i class="fas fa-quote-left quote"></i>
+                    <div class="rate">
+                     <h3>Step6</h3>
+                    </div>
+
+                    <p class="review-text">
+                      Increment the total seek count with this distance.
+
+                    </p>
+
+                    
+                  </div>
+
+                  <div class="swiper-slide review">
+                    <i class="fas fa-quote-left quote"></i>
+                    <div class="rate">
+                     <h3>Step7</h3>
+                    </div>
+
+                    <p class="review-text">
+                      Currently serviced track position now becomes the new head position.
+                    </p>
+
+                    
+                  </div>
+
+                  <div class="swiper-slide review">
+                    <i class="fas fa-quote-left quote"></i>
+                    <div class="rate">
+                     <h3>Step8</h3>
+                    </div>
+
+                    <p class="review-text">
+                      Go to step 5 until we reach at last request in this direction.
+
+                    </p>
+
+                    
+                  </div>
+
+                  <div class="swiper-slide review">
+                    <i class="fas fa-quote-left quote"></i>
+                    <div class="rate">
+                     <h3>Step9</h3>
+                    </div>
+
+                    <p class="review-text">
+                      If we reach where no requests are needed to be serviced in this direction reverse the 
+direction and go to step 3 until all tracks in request array have not been serviced.
+                    </p>
+
+                    
+                  </div>
+
+                  
+
+                </div>
+
+                <div class="review-nav swiper-button-prev">
+                  <i class="fas fa-long-arrow-alt-left"></i>
+                </div>
+                <div class="review-nav swiper-button-next">
+                  <i class="fas fa-long-arrow-alt-right"></i>
+                </div>
+              </div>
+              <a href="look.html#Stimulator" class="btn calculate">Calculate</a>
+            </div>
+
+            <div class="column-2 image">
+              <img src="img/LOOK.png" alt="" class="img-element" />
+            </div>
+          </div>
+        </div>
+
+        
+      </section>
+
+
+
+      
+      <section class="testimonials section" id="SCAN">
+        <div class="container">
+          <div class="section-header">
+            <h3 class="title" data-title="Disc scheduling Algorithms">SCAN Algorithm</h3>
+          </div>
+
+          <div class="testi-content grid-2">
+            <div class="column-1 reviews">
+              <div class="swiper-container">
+                <div class="swiper-wrapper">
+
+                  
+                  <div class="swiper-slide review">
+                    <i class="fas fa-quote-left quote"></i>
+                    <div class="rate">
+                     <h3>The Algorithm</h3>
+                    </div>
+
+                    <p class="review-text">
+                      In SCAN disk scheduling algorithm, head starts from one end of the disk and moves towards the other 
+end, servicing requests in between one by one and reach the other end. Then the direction of the head is 
+reversed and the process continues as head continuously scan back and forth to access the disk.
+                    </p>
+
+                   
+                  </div>
+
+
+                  <div class="swiper-slide review">
+                    <i class="fas fa-quote-left quote"></i>
+                    <div class="rate">
+                     <h3>Step1</h3>
+                    </div>
+
+                    <p class="review-text">
+                      Let Request array represents an array storing indexes of tracks that have been requested in 
+ascending order of their time of arrival. ‘head’ is the position of disk head.
+
+                    </p>
+
+                    
+                  </div>
+
+
+
+                  <div class="swiper-slide review">
+                    <i class="fas fa-quote-left quote"></i>
+                    <div class="rate">
+                      <h3>Step2</h3>
+                    </div>
+
+                    <p class="review-text">
+                      Let direction represents whether the head is moving towards left or right.
+
+                    </p>
+
+                  
+                  </div>
+
+                  <div class="swiper-slide review">
+                    <i class="fas fa-quote-left quote"></i>
+                    <div class="rate">
+                     <h3>Step3</h3>
+                    </div>
+
+                    <p class="review-text">
+                      In the direction in which head is moving service all tracks one by one.
+
+                    </p>
+
+                    
+                  </div>
+
+
+                  <div class="swiper-slide review">
+                    <i class="fas fa-quote-left quote"></i>
+                    <div class="rate">
+                     <h3>Step 4</h3>
+                    </div>
+
+                    <p class="review-text">
+                      Calculate the absolute distance of the track from the head.
+                    </p>
+
+                   
+                  </div>
+
+                  <div class="swiper-slide review">
+                    <i class="fas fa-quote-left quote"></i>
+                    <div class="rate">
+                     <h3>Step 5</h3>
+                    </div>
+
+                    <p class="review-text">
+                      Increment the total seek count with this distance.
+
+                    </p>
+
+                   
+                  </div>
+
+                  <div class="swiper-slide review">
+                    <i class="fas fa-quote-left quote"></i>
+                    <div class="rate">
+                     <h3>Step 6</h3>
+                    </div>
+
+                    <p class="review-text">
+                      Currently serviced track position now becomes the new head position.
+                    </p>
+
+                   
+                  </div>
+
+                  <div class="swiper-slide review">
+                    <i class="fas fa-quote-left quote"></i>
+                    <div class="rate">
+                     <h3>Step 7</h3>
+                    </div>
+
+                    <p class="review-text">
+                      Go to step 3 until we reach at one of the ends of the disk.
+                    </p>
+
+                   
+                  </div>
+
+                  <div class="swiper-slide review">
+                    <i class="fas fa-quote-left quote"></i>
+                    <div class="rate">
+                     <h3>Step 8</h3>
+                    </div>
+
+                    <p class="review-text">
+                      If we reach at the end of the disk reverse the direction and go to step 2 until all tracks in 
+                      request array have not been serviced.
+                    </p>
+
+                   
+                  </div>
+
+                  
+
+                </div>
+
+                <div class="review-nav swiper-button-prev">
+                  <i class="fas fa-long-arrow-alt-left"></i>
+                </div>
+                <div class="review-nav swiper-button-next">
+                  <i class="fas fa-long-arrow-alt-right"></i>
+                </div>
+              </div>
+              <a href="SCAN.html#Stimulator" class="btn calculate">Calculate</a>
+            </div>
+
+            <div class="column-2 image">
+              <img src="img/SCAN.png" alt="" class="img-element" />
+            </div>
+          </div>
+        </div>
+
+       
+      </section>
+
+
+
+      
+      <!-- <section class="testimonials section" id="CLOOK">
+        <div class="container">
+          <div class="section-header">
+            <h3 class="title" data-title="Disc scheduling Algorithms">CLOOK Algorithm</h3>
+          </div>
+
+          <div class="testi-content grid-2">
+            <div class="column-1 reviews">
+              <div class="swiper-container">
+                <div class="swiper-wrapper">
+
+                  
+                  <div class="swiper-slide review">
+                    <i class="fas fa-quote-left quote"></i>
+                    <div class="rate">
+                     <h3>The Algorithm</h3>
+                    </div>
+
+                    <p class="review-text">
+                      Lorem ipsum dolor sit amet consectetur, adipisicing elit.
+                      Perspiciatis ab incidunt, dicta quam inventore ipsum
+                      dolor. Consectetur nam incidunt error!
+                    </p>
+
+                   
+                  </div>
+
+
+                  <div class="swiper-slide review">
+                    <i class="fas fa-quote-left quote"></i>
+                    <div class="rate">
+                     <h3>Step1</h3>
+                    </div>
+
+                    <p class="review-text">
+                      Lorem, ipsum dolor sit amet consectetur adipisicing elit.
+                      Laudantium adipisci veniam debitis quas, sapiente
+                      repellendus mollitia. Laboriosam labore voluptate quos?
+                    </p>
+
+                    
+                  </div>
+
+                  <div class="swiper-slide review">
+                    <i class="fas fa-quote-left quote"></i>
+                    <div class="rate">
+                      <h3>Step2</h3>
+                    </div>
+
+                    <p class="review-text">
+                      Lorem ipsum dolor, sit amet consectetur adipisicing elit.
+                      Fugiat voluptate consequatur aut tenetur fugit error
+                      molestiae quaerat ex odio rem?
+                    </p>
+
+                  
+                  </div>
+
+                  <div class="swiper-slide review">
+                    <i class="fas fa-quote-left quote"></i>
+                    <div class="rate">
+                     <h3>Step3</h3>
+                    </div>
+
+                    <p class="review-text">
+                      Lorem ipsum dolor sit amet consectetur adipisicing elit.
+                      Cupiditate voluptatum enim nemo quod amet dolorum aliquam,
+                      sapiente omnis eaque consectetur.
+                    </p>
+
+                    
+                  </div>
+
+                  
+
+                </div>
+
+                <div class="review-nav swiper-button-prev">
+                  <i class="fas fa-long-arrow-alt-left"></i>
+                </div>
+                <div class="review-nav swiper-button-next">
+                  <i class="fas fa-long-arrow-alt-right"></i>
+                </div>
+              </div>
+              <a href="Clook.html#Stimulator" class="btn calculate">Calculate</a>
+            </div>
+
+            <div class="column-2 image">
+              <img src="img/CLOOK.png" alt="" class="img-element" />
+            </div>
+          </div>
+        </div>
+
+        
+      </section> -->
+
+
+
+       <!---edit-->
+      
+
+
+       <section class="portfolio section" id="AboutUs">
+        <div class="background-bg">
+          <div class="overlay overlay-sm">
+            <img
+              src="./img/shapes/half-circle.png"
+              class="shape half-circle1"
+              alt=""
+            />
+            <img
+              src="./img/shapes/half-circle.png"
+              class="shape half-circle2"
+              alt=""
+            />
+            <img src="./img/shapes/square.png" class="shape square" alt="" />
+            <img src="./img/shapes/wave.png" class="shape wave" alt="" />
+            <img src="./img/shapes/circle.png" class="shape circle" alt="" />
+            <img
+              src="./img/shapes/triangle.png"
+              class="shape triangle"
+              alt=""
+            />
+            <img src="./img/shapes/x.png" class="shape xshape" alt="" />
+          </div>
+        </div>
+
+        <!-- <div class="container">
+          <div class="section-header">
+            <h3 class="title" data-title="Disc Schedulig Algorithms">The Team</h3>
+          </div>
+
+          <div class="section-body">
+            <div class="filter">
+              <button class="filter-btn active" data-filter="*">All</button>
+              <button class="filter-btn" data-filter=".ui">Front end</button>
+              <button class="filter-btn" data-filter=".webdev">Back end</button>
+              <button class="filter-btn" data-filter=".appdev">
+                Algorithms
+              </button>
+              <button class="filter-btn" data-filter=".logo-design">
+                Design
+              </button>
+            </div>
+
+            <div class="grid">
+              <div class="grid-item appdev logo-design">
+                <div class="gallery-image">
+                  <img src="./img/portfolio/nabhi-image.jpeg" alt="" />
+                  <div class="img-overlay">
+                    <div class="plus"></div>
+                    <div class="img-description">
+                      <h3>Nabhi Shah</h3>
+                      <h5>Design & Algo</h5>
+                    </div>
+                  </div>
+                </div>
+              </div>
+              <div class="grid-item ui appdev">
+                <div class="gallery-image">
+                  <img src="./img/portfolio/Saumya-image.jpeg" alt="" />
+                  <div class="img-overlay">
+                    <div class="plus"></div>
+                    <div class="img-description">
+                      <h3>Saumya Shah</h3>
+                      <h5>Front-End & Algo</h5>
+                    </div>
+                  </div>
+                </div>
+              </div>
+              <div class="grid-item ui webdev">
+                <div class="gallery-image">
+                  <img src="./img/portfolio/Pulak-image.jpg" alt="" />
+                  <div class="img-overlay">
+                    <div class="plus"></div>
+                    <div class="img-description">
+                      <h3>Pulak Jain</h3>
+                      <h5>Front-End & Back-End</h5>
+                    </div>
+                  </div>
+                </div>
+              </div>
+              <div class="grid-item appdev webdev">
+                <div class="gallery-image">
+                  <img src="./img/portfolio/Om-image.jpeg" alt="" style="width: 70%; height: 120%;">
+                  <div class="img-overlay">
+                    <div class="plus"></div>
+                    <div class="img-description">
+                      <h3>Om patel</h3>
+                      <h5>Back-End & Algo</h5>
+                    </div>
+                  </div>
+                </div>
+              </div>
+             
+              <div class="grid-item ui logo-design">
+                <div class="gallery-image">
+                  <img src="./img/portfolio/Jugal-image.jpeg" alt="" />
+                  <div class="img-overlay">
+                    <div class="plus"></div>
+                    <div class="img-description">
+                      <h3>Jugal Soni</h3>
+                      <h5>Front-End & Design</h5>
+                    </div>
+                  </div>
+                </div>
+              </div>
+           
+             
+              
+            </div>
+          </div>
+        </div> -->
+      </section>
+
+
+     
+
+      <section class="hireme" id="hireme">
+        <div class="container">
+          <h3 class="title">Thank You!</h3>
+          <!-- <p class="text">
+            This website is part of our University
+             project - (Pandit Deendayal Energy University) for the Operating Systems Lab course. We are taking feedbacks for any bugs you face for this site. Ping anyone of the developer on their LinkedIn profile given below if you wish to report a bug.
+          </p> -->
+          
+        </div>
+      </section>
+    </main>
+
+    <footer class="footer">
+      <div class="container">
+        <div class="grid-4">
+          <div class="grid-4-col footer-about">
+            <h3 class="title-sm">Disc scheduling Algorithm</h3>
+            <p class="text">
+              A simulating website to visualize and compare different Disc Scheduling Algorithms
+            </p>
+            <p class="text">
+              This website is best optimized for Google Chrome and Microsoft Edge
+            </p>
+          </div>
+
+          <div class="grid-4-col footer-links">
+            <h3 class="title-sm">Links</h3>
+            <ul>
+              <li>
+                <a href="FCFS.html">FCFS</a>
+              </li>
+              <li>
+                <a href="SSTF.html">SSTF</a>
+              </li>
+              <li>
+                <a href="CSCAN.html">CSCAN</a>
+              </li>
+              <li>
+                <a href="LOOK.html">LOOK</a>
+              </li>
+              <li>
+                <a href="SCAN.html">SCAN</a>
+              </li>
+              <li>
+                <a href="CLOOK.html">CLOOK</a>
+              </li>
+            </ul>
+          </div>
+
+          <div class="grid-4-col footer-links">
+            <h3 class="title-sm">Reach out</h3>
+              <ul>
+                <li>
+                  <a href="https://www.linkedin.com/in/yamini-sisodia-357b53220/">Yamini Sisodia</a>
+                </li>
+              </ul>
+
+          </div>
+
+
+          <div class="grid-4-col footer-newstletter">
+            
+            <div class="footer-input-wrap">
+              <input type="email" class="footer-input" placeholder="To TOP" />
+              <a href="#" class="input-arrow">
+                <i class="fas fa-angle-up"></i>
+              </a>
+            </div>
+          </div>
+        </div>
+
+            <div class="back-btn-wrap">
+              <a href="#" class="back-btn">
+                <i class="fas fa-chevron-up"></i>
+              </a>
+            </div>
+          </div>
+       
+    </footer>
+  </body>
+</html>
